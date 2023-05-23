@@ -261,9 +261,12 @@
         We introduce <span class="dnerf">Dynosaur</span>, a dynamic growth paradigm for instruction-tuning data curation. Built upon the metadata of existing NLP datasets, we generate multiple task instructions applicable to various NLP datasets and determine the relevant data fields for constructing instruction-tuning data with LLMs. 
         <br><br>Dynosaur offers several advantages: 
         <ul>
-          <li><strong>Lower generation costs (less than $12 for generating 800K instruction-tuning data)</strong></li> 
-          <li><strong>Good quality of instruction-tuning data (higher validity than Self-Instruct, and better downstream performance than Alpaca and Instruction GPT-4 on Super-NI with comparable data sizes)</strong></li>
-          <li><strong>Ability to grow dynamically by incorporating new datasets from Huggingface Datasets Platform</strong></li>
+          <li><strong>1. Lower generation costs</strong>
+            <br>Less than $12 for generating 800K instruction-tuning data</li> 
+          <li><strong>2. Good quality of instruction-tuning data</strong>
+            <br>Higher validity than Self-Instruct, and better downstream performance than Alpaca and Instruction GPT-4 on Super-NI with comparable data sizes</strong></li>
+          <li><strong>3. Ability to grow dynamically</strong>
+            <br>Continuously incorporating new datasets from Huggingface Datasets for constructing new tasks</li>
         </ul>
         <br>
       </h2>
