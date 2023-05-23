@@ -258,11 +258,10 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           We introduce <span class="dnerf">Dynosaur</span>, a dynamic growth paradigm for instruction-tuning data curation. Built upon metadata of NLP datasets, we generate multiple task instructions applicable to various NLP datasets and determine the relevant data fields for constructing instruction-tuning data with LLMs. 
-          <br><br>Dynosaur offers several advantages: 
+          <br><br><span class="dnerf">Dynosaur</span> offers several advantages: 
           <ul>
             <li><strong>Lower generation costs</strong>
               <br>&nbsp &nbsp - Less than $12 for generating 800K instruction-tuning data</li> 
@@ -273,11 +272,10 @@
             <li><strong>Ability to grow dynamically</strong>
               <br>&nbsp &nbsp - Continuously producing instructions over new datasets from Huggingface Datasets</li>
           </ul>
-        </div>
-        <p align="center">
-          <img src="static/images/intro.png" width="100%" align="middle" class="center"/> <!-- To .gif format-->
-        </p>
-      </div>
+          <p align="center">
+            <img src="static/images/intro.png" width="100%" align="middle" class="center"/> <!-- To .gif format-->
+          </p>
+         </div>
     </div>
     <!--/ Abstract. -->
 
@@ -292,6 +290,30 @@
       </div>
     </div> -->
     <!--/ Paper video. -->
+  </div>
+</section>
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><span class="dnerf">Dynosaur</span> Collection Method</h2>
+        <div class="content has-text-justified">
+          <span class="dnerf">Dynosaur</span> offers several advantages: 
+          <ul>
+            <li><strong>Lower generation costs</strong>
+              <br>&nbsp &nbsp - Less than $12 for generating 800K instruction-tuning data</li> 
+            <li><strong>Good quality of instruction-tuning data</strong>
+              <br>&nbsp &nbsp - Higher validity than Self-Instruct
+              <br>&nbsp &nbsp - Better downstream performance than Alpaca and Instruction GPT-4 on Super-NI
+              <br>&nbsp &nbsp - Helpful supplement to further improve performance on Super-NI and User-Instruction-252</li>
+            <li><strong>Ability to grow dynamically</strong>
+              <br>&nbsp &nbsp - Continuously producing instructions over new datasets from Huggingface Datasets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
