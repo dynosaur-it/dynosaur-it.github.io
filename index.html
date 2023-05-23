@@ -335,7 +335,7 @@
     <!-- Results. -->
     <div class="columns is-centered">
       <div class="column has-text-centered">
-        <h2 class="title is-3">Analysis</h2>
+        <h2 class="title is-3">Results</h2>
         <div class="content has-text-justified">
         <img src="static/images/superni_results.png" class="center">
           <p>
@@ -350,7 +350,9 @@
             Dynosaur targets on task solving and contains fewer instructions on user assistance (like writing emails and organizing data), but we also notice that on User-Instruction-252, Dynosaur can be exploited as additional training data to achieve higher performance than solely training with either Alpaca or Instruction GPT-4.
           </p>
           <br>
-          <img src="static/images/cost.png" width="400" class="center">
+          <p align="center">
+           <img src="static/images/cost.png" width="400" class="center">
+          </p>
           <p>
             We calculate the cost of generating all the Dynosaur instructions and a subset for Super-NI fine-tuning. Dynosaur can bring better performance with much less generation cost.
           </p>
@@ -378,15 +380,51 @@
 
 </section>
   
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h2 class="title is-3">Analysis</h2>
+        <div class="content has-text-justified">
+          <p align="center">
+           <img src="static/images/cost.png" width="400" class="center">
+          </p>
+          <p>
+            We calculate the cost of generating all the Dynosaur instructions and a subset for Super-NI fine-tuning. Dynosaur can bring better performance with much less generation cost.
+          </p>
+          <p align="center">
+           <img src="static/images/validity.png" width="400" class="center"> <!-- To .gif format-->
+          </p>
+          <p>
+            We also recruit human annotators to evaluate (instruction, input, output) pairs. We find that our method is found to be completely correct in 79% of instances, a substantial improvement over the 54% reported in Self-Instruct.
+          </p>
+          <p align="center">
+             <img src="static/images/continual_learning.png" class="center"> <!-- To .gif format-->
+          </p>
+          <p>
+            As Dynosaur can expand over time as new tasks come in, an important question is how to adapt a trained instruction-following model to new tasks without suffering from catastrophic forgetting.
+          </p>
+          <p>
+            Experiments on Super-NI show that replaying is an effective method to improve generalization ability and mitigate forgetting issues. For instruction tuning, we further design to select replay tasks based on instruction representations. 
+            Results show that selecting the most diverse instruction representations can be better than selecting based on data representation diversity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--/ Results. -->
+
+</section>
+
+  
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>
+    
+    </code></pre>
   </div>
 </section>
 
