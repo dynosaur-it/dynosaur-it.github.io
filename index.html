@@ -270,6 +270,7 @@
             <li><strong>Ability to grow dynamically</strong>
               <br>&nbsp &nbsp - Continuously producing instructions over new datasets from Huggingface Datasets</li>
           </ul>
+          An ever-growing instruction-tuning dataset provides an opportunity to dynamically and continuously improve instruction-following models. We also perform analysis to study the proper replay strategy for better generalizability and less forgetting issues.
          </div>
     </div>
     <!--/ Abstract. -->
@@ -331,8 +332,8 @@
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Results. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
         <h2 class="title is-3">Analysis</h2>
         <div class="content has-text-justified">
           <p>
@@ -342,6 +343,7 @@
             In particular, training T5-3B with Dynosaur brings at least 2.5-22 ROUGE-L improvement than baselines.
           </p>
         <img src="static/images/superni_results.png" class="center">
+          <br>
           <p>
             Dynosaur targets on task solving and contains fewer instructions on user assistance (like writing emails and organizing data), but we also notice that on User-Instruction-252, Dynosaur can be exploited as additional training data to achieve higher performance than solely training with either Alpaca or Instruction GPT-4.
           </p>
@@ -361,8 +363,12 @@
           <p>
             As Dynosaur can expand over time as new tasks come in, an important question is how to adapt a trained instruction-following model to new tasks without suffering from catastrophic forgetting.
           </p>
+          <p>
+            Experiments on Super-NI show that replaying is an effective method to improve generalization ability and mitigate forgetting issues. For instruction tuning, we further design to select replay tasks based on instruction representations. 
+            Results show that selecting the most diverse instruction representations can be better than selecting based on data representation diversity.
+          </p>
           <p align="center">
-             <img src="static/images/continual_learning.png" width="400" class="center"> <!-- To .gif format-->
+             <img src="static/images/continual_learning.png" class="center"> <!-- To .gif format-->
           </p>
         </div>
       </div>
