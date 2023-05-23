@@ -258,7 +258,6 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           We introduce <span class="dnerf">Dynosaur</span>, a dynamic growth paradigm for instruction-tuning data curation. Built upon metadata of NLP datasets, we generate multiple task instructions applicable to various NLP datasets and determine the relevant data fields for constructing instruction-tuning data with LLMs. 
           <br><br><span class="dnerf">Dynosaur</span> offers several advantages: 
@@ -300,17 +299,32 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3"><span class="dnerf">Dynosaur</span> Collection Method</h2>
         <div class="content has-text-justified">
-          <span class="dnerf">Dynosaur</span> offers several advantages: 
+          The collection process of <span class="dnerf">Dynosaur</span> consists of following steps: 
           <ul>
-            <li><strong>Lower generation costs</strong>
-              <br>&nbsp &nbsp - Less than $12 for generating 800K instruction-tuning data</li> 
-            <li><strong>Good quality of instruction-tuning data</strong>
-              <br>&nbsp &nbsp - Higher validity than Self-Instruct
-              <br>&nbsp &nbsp - Better downstream performance than Alpaca and Instruction GPT-4 on Super-NI
-              <br>&nbsp &nbsp - Helpful supplement to further improve performance on Super-NI and User-Instruction-252</li>
-            <li><strong>Ability to grow dynamically</strong>
-              <br>&nbsp &nbsp - Continuously producing instructions over new datasets from Huggingface Datasets</li>
+            <li><strong>Metadata collection:</strong>
+              <br>&nbsp &nbsp - Collect dataset name, description, data fields and dataset annotations from Huggingface</li> 
+            <li><strong>Instruction and input/output field generation:</strong>
+              <br>&nbsp &nbsp - Prompting LLMs with metadata and outputing multiple instructions and input/output fields</li>
+            <li><strong>Filtering out invalid instruction data:</strong>
+              <br>&nbsp &nbsp - Filtering out duplicate instructions and the ones with invalid input/output fields</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Generated Insttruction Cases</h2>
+        <div class="content has-text-justified">
+          <p>
+            In Example 1, LLMs infer from the dataset name that it is about anaphor agreement and include this information in the instruction. In Example 2, LLMs create the task of paraphrase identification by understanding the relationship between the fields "sentence1" and "sentence2" implied in the dataset description. Under the description-unaware setting like Example 3, tasks can be generated based on the names of data fields.
+          </p>
+          <img src="static/images/case_study.png" class="center">
         </div>
       </div>
     </div>
