@@ -253,31 +253,6 @@
     </div>
   </div>
 </section> -->
-  
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle">
-        We introduce <span class="dnerf">Dynosaur</span>, a dynamic growth paradigm for instruction-tuning data curation. Built upon the metadata of existing NLP datasets, we generate multiple task instructions applicable to various NLP datasets and determine the relevant data fields for constructing instruction-tuning data with LLMs. 
-        <br><br>Dynosaur offers several advantages: 
-        <ul>
-          <li><strong>1. Lower generation costs</strong>
-            <br>Less than $12 for generating 800K instruction-tuning data</li> 
-          <li><strong>2. Good quality of instruction-tuning data</strong>
-            <br>Higher validity than Self-Instruct, and better downstream performance than Alpaca and Instruction GPT-4 on Super-NI with comparable data sizes</strong></li>
-          <li><strong>3. Ability to grow dynamically</strong>
-            <br>Continuously incorporating new datasets from Huggingface Datasets for constructing new tasks</li>
-        </ul>
-        <br>
-      </h2>
-      <p align="center">
-        <img src="static/images/intro.png" width="100%" align="middle" class="center"/> <!-- To .gif format-->
-      </p>
-
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -286,16 +261,20 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            Instruction tuning has emerged to enhance the capabilities of large language models (LLMs) in providing appropriate outputs based on input instructions. However, existing methods for collecting instruction-tuning data suffer from limitations in scalability and affordability.
-          </p>
-          <p>
-            In this paper, we propose <b>Dynosaur</b>, a dynamic growth paradigm for instruction-tuning data curation. Built upon the metadata of existing NLP datasets, we generate multiple task instructions applicable to various NLP datasets and determine the relevant data fields for constructing instruction-tuning data with LLMs. <b>Dynosaur</b> offers several advantages: 1) lower generation costs (less than $12 for generating 800K instruction-tuning data), 2) good quality of instruction-tuning data (better performance than Alpaca and Instruction GPT-4 on Super-NI with comparable data sizes), and 3) the ability to grow dynamically by incorporating new datasets from Huggingface Datasets Platform.
-          </p>
-          <p>
-            We further investigate continual learning as an approach to learning with the ever-growing instruction-tuning dataset. We demonstrate that replay methods not only help mitigate forgetting issues but help generalize to unseen tasks better. As a novel continual learning scenario for instruction tuning, selecting tasks based on instruction representations can be an effective replaying strategy.
-          </p>
+          We introduce <span class="dnerf">Dynosaur</span>, a dynamic growth paradigm for instruction-tuning data curation. Built upon the metadata of existing NLP datasets, we generate multiple task instructions applicable to various NLP datasets and determine the relevant data fields for constructing instruction-tuning data with LLMs. 
+          <br><br>Dynosaur offers several advantages: 
+          <ul>
+            <li><strong>1. Lower generation costs</strong>
+              <br>Less than $12 for generating 800K instruction-tuning data</li> 
+            <li><strong>2. Good quality of instruction-tuning data</strong>
+              <br>Higher validity than Self-Instruct, and better downstream performance than Alpaca and Instruction GPT-4 on Super-NI with comparable data sizes</strong></li>
+            <li><strong>3. Ability to grow dynamically</strong>
+              <br>Continuously incorporating new datasets from Huggingface Datasets for constructing new tasks</li>
+          </ul>
         </div>
+        <p align="center">
+          <img src="static/images/intro.png" width="100%" align="middle" class="center"/> <!-- To .gif format-->
+        </p>
       </div>
     </div>
     <!--/ Abstract. -->
