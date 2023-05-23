@@ -263,38 +263,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Instruction tuning has emerged to enhance the capabilities of large language models (LLMs) in providing appropriate outputs based on input instructions. However, existing methods for collecting instruction-tuning data suffer from limitations in scalability and affordability.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            In this paper, we propose <b>Dynosaur</b>, a dynamic growth paradigm for instruction-tuning data curation. Built upon the metadata of existing NLP datasets, we generate multiple task instructions applicable to various NLP datasets and determine the relevant data fields for constructing instruction-tuning data with LLMs. <b>Dynosaur</b> offers several advantages: 1) lower generation costs (less than $15 for generating 946K instruction-tuning data), 2) good quality of instruction-tuning data (better performance than Alpaca and Instruction GPT-4 on Super-NI with comparable data sizes), and 3) the ability to grow dynamically by incorporating new datasets from Huggingface Datasets Platform.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We further investigate continual learning as an approach to learning with the ever-growing instruction-tuning dataset. We demonstrate that replay methods not only help mitigate forgetting issues but help generalize to unseen tasks better. As a novel continual learning scenario for instruction tuning, selecting tasks based on instruction representations can be an effective replaying strategy.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+<!--     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -304,12 +286,12 @@
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+    <!--/ Paper video. --> -->
   </div>
 </section>
 
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
@@ -443,10 +425,10 @@
     <!--/ Concurrent Work. -->
 
   </div>
-</section>
+</section> -->
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -456,17 +438,17 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://dynosaur-it.github.io/">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/dynosaur-it" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
